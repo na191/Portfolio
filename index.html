@@ -28,8 +28,30 @@
     </section>
 
     <section id="Bio">
-        <h1 style="text-align: center;">About Me</h1>
-        <p>In my career, I’ve worked with cross-functional teams to implement data solutions that improve operational efficiency and foster data-driven strategies. My approach combines technical proficiency with a deep understanding of business needs, enabling me to transform raw data into valuable intelligence that supports growth and innovation.
+        <hr>
+        <h1 class="biogrid1" style="text-align: center;padding-top: 20px;">About Me</h1>
+        <p class="biogrid2">In my career, I’ve worked with cross-functional 
+            teams to implement data solutions that improve operational efficiency and foster data-driven strategies. My approach combines technical proficiency with a deep understanding of business needs, enabling me to transform raw data into valuable intelligence that supports growth and innovation.
+        </p>
+        <p>Core skills
+            <ul>
+                <li>Data Cleaning</li>
+                <li>Data Visualizations</li>
+                <li>Shiny App Development</li>
+                <li>Process Automation & workflow optimization</li>
+            </ul>
+        </p>Coding Languages and Technologies
+        <ul>
+            <li>R, Python, SQL, HTML, CSS</li>
+            <li>Power Automate</li>
+            <li>Github Actions</li>
+            <li>Power Automate</li>
+            <li>Docker</li>
+            <li>Dynamics 365</li>
+            <li>Hubspot</li>
+        </ul>
+        <p>
+
         </p>
 
     </section>
@@ -39,11 +61,61 @@
     </section>
 
     <section id="Testimonails">
+        <hr>
+        <h1 style="text-align: center;">Testimonials</h1>
+        <div class="test-container">
+        <div class="testimonial"> This is the best data project I have ever received. I highly recommend! </div>
+        <div class="testimonial"> Honest, Polite, Efficient and excellent grasp of complex data.</div>
+        <div class="testimonial"> Very cool plots - exactly what I needed for my project</div>
+        <div class="testimonial">Noel was amazing, very responsive and delivered within time. She was very helpful explaining in detail and correcting errors.</div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+        </div>
+
+        
 
 
+
+        <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("testimonial");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        </script>
     </section>
 
     <section id="Contact-me">
+        <hr>
 
 
     </section>
